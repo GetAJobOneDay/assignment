@@ -26,17 +26,5 @@
             $do=$do->fetchAll(PDO::FETCH_ASSOC);
             return $do[0];
         }
-        public function register($query){
-        
-            $arg = "insert into users(id,Uname,email,password) values (:id,:Uname,:email,:password)";
-            $this->pdo->prepare($arg)->execute($query);
-            
-        }
-       public function isExist($query){
-            $arg = "select * from users where email='$query'";
-            $flag = $this->pdo->query($arg)->rowCount();
-            $flag>0?false:true;
-            return $flag;
-       }
     }
 ?>

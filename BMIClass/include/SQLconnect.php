@@ -2,7 +2,7 @@
    
       try 
       {
-          $pdo = new PDO('mysql:host=localhost;dbname=lab06;charset=utf8', 'root', '');
+          $pdo = new PDO('mysql:host=localhost:3308;dbname=lab06;charset=utf8', 'root', '');
           $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
           //echo 'Database connection established.';
         

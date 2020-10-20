@@ -6,9 +6,11 @@
     <title>Document</title>
 </head>
 <body>
+<?php
+    session_start();
+?>
     <form action="../public/index.php?action=add" method="POST">
-    <label>Name: </label>
-    <input type="text", name="name">
+    <input type="hidden", name="name", value='<?php echo $_SESSION["user"]; ?>'>
     <br>
     <label>weight: </label>
     <input type="text", name="w">

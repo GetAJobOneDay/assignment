@@ -9,9 +9,11 @@
     <?php
     
         echo "<h2> $output</h3>";
-        foreach($error as $err){
+        if(isset($error)){
+           foreach($error as $err){
             echo "$err<br>";
-        }
+        } 
+    }
     ?>
 </body>
 </html>

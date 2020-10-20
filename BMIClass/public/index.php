@@ -15,11 +15,13 @@
       } else if($location=="add"){
             $db->add();
       }else if($location=="register"){
-          $db->register();
+          $login->register();
       }else  if($location=="login") {
         $login->login();
       }else if($location=="home"){
         $db->home();
+      }else if($location == "logout"){
+        $login->logout();
       }
     }else{
       include "../template/home.html.php";
